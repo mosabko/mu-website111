@@ -1,0 +1,199 @@
+[2:47 ص، 2025/7/9] ا: <!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>الصفحة الرئيسية</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(120deg, #004e92, #000428);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      position: relative;
+      text-align: center;
+      padding: 30px;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    .moon {
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle at 70% 30%, #ffffffaa, #00000000);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    h1 {
+      font-size: 3.5em;
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.4em;
+    }
+
+    .welcome-text {
+      font-size: 1.8em;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 15px 25px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 15px #ffffff33;
+      line-height: 1.8;
+    }
+
+    .main-button {
+      padding: 18px 36px;
+      font-size: 1.5em;
+      background: #00bfff;
+      color: white;
+      border: none;
+      border-radius: 35px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 8px 20px rgba(0, 191, 255, 0.4);
+      margin-bottom: 60px;
+    }
+
+    .main-button:hover {
+      background: #0099e6;
+      transform: scale(1.05);
+    }
+
+    .contact-box {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      padding: 20px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="moon"></div>
+  <h1>مرحبًا بك في متجرنا الرقمي</h1>
+  <div class="welcome-text">
+    يسعدنا أن نقدم لك تجربة تسوق إلكتروني فريدة، تشمل منتجات موثوقة، جودة عالية، وأسعار منافسة.
+  </div>
+  <a href="products.html"><button class="main-button">استعرض المنتجات الآن</button></a>
+
+  <div class="contact-box">
+    إذا واجهتك مشاكل، تواصل على الرقم: 0937661004 أو 0997800661
+  </div>
+</body>
+</html>
+[2:47 ص، 2025/7/9] ا: كود الصفحه الأولى
+[2:50 ص، 2025/7/9] ا: <!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>المنتجات</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(120deg, #1e3c72, #2a5298);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px 80px;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .product {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      margin: 20px auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .product h2 {
+      margin-bottom: 10px;
+      font-size: 1.8em;
+    }
+
+    .product p {
+      font-size: 1.2em;
+    }
+
+    a.button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 25px;
+      background-color: #00bfff;
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    a.button:hover {
+      background-color: #0099e6;
+    }
+
+    .back-link {
+      margin-top: 30px;
+      display: inline-block;
+      color: white;
+      text-decoration: underline;
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>قائمة المنتجات</h1>
+
+  <div class="product">
+    <h2>كاميرا مراقبة ذكية</h2>
+    <p>دقة عالية - رؤية ليلية - 100$</p>
+    <a href="#" class="button">اطلب الآن</a>
+  </div>
+
+  <div class="product">
+    <h2>جهاز DVR</h2>
+    <p>مسجل فيديو عالي الجودة - 150$</p>
+    <a href="#" class="button">اطلب الآن</a>
+  </div>
+
+  <div class="product">
+    <h2>كابل RG59</h2>
+    <p>جودة ممتازة - 1$/متر</p>
+    <a href="#" class="button">اطلب الآن</a>
+  </div>
+
+  <a href="index.html" class="back-link">الرجوع إلى الصفحة الرئيسية</a>
+
