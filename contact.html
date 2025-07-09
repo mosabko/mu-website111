@@ -3,24 +3,197 @@
 <head>
   <meta charset="UTF-8">
   <title>اتصل بنا</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #091540, #1E2A78, #3366CC);
+      background-size: 400% 400%;
+      animation: moveBg 12s ease infinite;
+      color: #fff;
+      padding: 40px 20px 120px;
+      text-align: center;
+    }
+
+    @keyframes moveBg {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .intro {
+      font-size: 1.3em;
+      font-weight: bold;
+      font-style: italic;
+      margin-bottom: 30px;
+      color: #aee4ff;
+      background-color: rgba(255,255,255,0.1);
+      padding: 15px;
+      border-radius: 12px;
+      max-width: 700px;
+      margin-inline: auto;
+      box-shadow: 0 0 12px rgba(255,255,255,0.2);
+    }
+
+    nav {
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      color: #aee4ff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-info {
+      font-size: 1.2em;
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      line-height: 2;
+    }
+
+    .contact-info a {
+      color: #aee4ff;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .icon {
+      margin-left: 8px;
+    }
+
+    form {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    input, textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      padding: 12px 25px;
+      background-color: #00bfff;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #007acc;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 30px;
+      font-size: 1.1em;
+      color: white;
+      text-decoration: underline;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.4);
+      color: white;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>اتصل بنا</h1>
-    <nav>
-      <a href="index.html">الرئيسية</a>
-      <a href="products.html">المنتجات</a>
-      <a href="contact.html">اتصل بنا</a>
-    </nav>
-  </header>
-  <main>
-    <p>يمكنك التواصل معنا عبر البريد:</p>
-    <p>store@example.com</p>
-    <p>أو الاتصال على: 0999999999</p>
-  </main>
+  <h1>اتصل بنا</h1>
+  <span style="
+    font-size: 1.4em;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    text-shadow:
+      -1px -1px 0 black,
+      1px -1px 0 black,
+      -1px 1px 0 black,
+      1px 1px 0 black;
+  ">
+    🛍️ أهلاً وسهلاً في متجر الرحيبة الرقمي لتلبية كافة المتطلبات بأسرع وقت وبأقل الأسعار
+  </span>
+<br><br><br><br>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="products.html">المنتجات</a>
+    <a href="contact.html">اتصل بنا</a>
+  </nav>
+
+  <div class="contact-info">
+    <p>📧 البريد الإلكتروني: 
+      <a href="mailto:mosab1999ko@gmail.com">
+        mosab1999ko@gmail.com 
+        <span class="icon">📩</span>
+      </a>
+    </p>
+    <p>
+      <a href="https://wa.me/963937661004" target="_blank">📱 0937661004 (mosab) <span class="icon">💬</span></a><br>
+      <a href="https://wa.me/963997800661" target="_blank">📱 0997800661 (Salah) <span class="icon">💬</span></a>
+    </p>
+    <p>
+      <a href="https://www.facebook.com/share/1AZMdqRNQX/" target="_blank">🔵 صفحتنا على فيسبوك</a>
+    </p>
+  </div>
+
+  <form onsubmit="sendToWhatsapp(); return false;">
+    <input type="text" id="name" placeholder="الاسم الكامل" required>
+    <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+    <textarea id="message" placeholder="اكتب رسالتك هنا..."></textarea>
+    <button type="submit">إرسال عبر واتساب</button>
+  </form>
+
+  <a href="index.html" class="back-link">↩ الرجوع إلى الصفحة الرئيسية</a>
+
   <footer>
     جميع الحقوق محفوظة &copy; 2025
   </footer>
+
+  <script>
+    function sendToWhatsapp() {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      const fullMessage = مرحبًا، أنا ${name} (%0Aالبريد: ${email})،%0Aأرغب في التواصل معكم:%0A${message};
+      const url = https://wa.me/963937661004?text=${fullMessage};
+      window.open(url, '_blank');
+    }
+  </script>
 </body>
 </html>
