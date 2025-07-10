@@ -110,11 +110,48 @@
 </head>
 <body>
 
-  <!-- ✅ شعار المتجر -->
-  <div class="logo-box">
-    <h1>متجر الرحيبة الرقمي</h1>
-    <p>منتجات إلكترونية • خدمات تقنية • مواد بناء</p>
-  </div>
+<!-- أضف هذا الكود داخل <body> في جميع صفحات الموقع -->
+
+<div class="digital-logo">
+  <span>متجر الرحيبة<br><small>الرقمي الأول</small></span>
+</div>
+
+<style>
+.digital-logo {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at center, #1e3c72, #2a5298);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 9999;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  user-select: none;
+  animation: rotateLogo 20s linear infinite;
+}
+
+.digital-logo small {
+  font-size: 0.7em;
+  display: block;
+  opacity: 0.9;
+}
+
+@keyframes rotateLogo {
+  0% { transform: rotate(0deg);}
+  100% { transform: rotate(360deg);}
+}
+</style>
 
   <div class="moon"></div>
 
