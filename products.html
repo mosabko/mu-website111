@@ -2,179 +2,152 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>المنتجات</title>
+  <title>المنتجات - متجر الرحيبة</title>
   <style>
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(-45deg, #1e3c72, #ff6f91, #00c9ff, #2a5298);
+      background: linear-gradient(135deg, #091540, #1E2A78, #3366CC);
       background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
+      animation: moveBg 12s ease infinite;
       color: #fff;
+      padding: 40px 20px 120px;
       text-align: center;
-      padding: 40px 20px 80px;
     }
 
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
+    @keyframes moveBg {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-      background: linear-gradient(45deg, #00d2ff, #3a7bd5);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+
+    nav {
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      color: #aee4ff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
     }
 
     .product {
-      background: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255,255,255,0.1);
       border-radius: 12px;
-      margin: 20px auto;
-      padding: 20px;
-      width: 90%;
-      max-width: 600px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      text-align: center;
     }
 
-    .product h2 {
+    .product img {
+      width: 100%;
+      max-height: 160px;
+      object-fit: contain;
       margin-bottom: 10px;
-      font-size: 1.8em;
+      border-radius: 10px;
+      background: white;
+    }
+
+    .product h3 {
+      font-size: 1.2em;
+      margin: 10px 0 5px;
     }
 
     .product p {
-      font-size: 1.2em;
+      margin: 5px 0;
     }
 
-    a.button {
+    .product a {
       display: inline-block;
-      margin-top: 15px;
-      padding: 10px 25px;
-      background-color: #00bfff;
+      margin-top: 10px;
+      background: #00bfff;
       color: white;
-      border-radius: 25px;
+      padding: 8px 16px;
+      border-radius: 20px;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s ease;
     }
 
-    a.button:hover {
-      background-color: #0099e6;
-    }
-
-    .back-link {
-      margin-top: 30px;
-      display: inline-block;
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.4);
       color: white;
-      text-decoration: underline;
-      font-size: 1.1em;
+      padding: 15px;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
-  <h1>قائمة المنتجات</h1>
-  <br><br><br>
-  <br><br>
-  <p style="font-size: 1.2em; max-width: 700;margin: 0 auto 30x; color: #e0f7ff;">
-    <span style="
-    font-size: 1.4em;
-    font-weight: bold;
-    color: white;
-    padding: 10px 20px;
-    border: 2px solid black;
-    border-radius: 10px;
-    display: inline-block;
-    text-shadow:
-      -1px -1px 0 black,
-      1px -1px 0 black,
-      -1px 1px 0 black,
-      1px 1px 0 black;
-  ">
-  
-    هنا تجد أفضل منتجات كامرات المراقبة ,أجهزة التسجيل ,والاسلاك عالية الجودة .جميع منتجاتنا مختارة بعناية لتناسب احتياجاتك التقنية وبأفضل الاسعار 
-  </span>
-  </p> 
-      
-      <br><br><br><br><br>
-  <div class="product">
-    <h2>كاميرا مراقبة ذكية</h2>
-    <p>دقة عالية - رؤية ليلية - 100$</p>
-    <a href="contact.html" class="button">اطلب الآن</a>
+  <h1>🛒 منتجاتنا</h1>
+
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="products.html">المنتجات</a>
+    <a href="contact.html">اتصل بنا</a>
+  </nav>
+
+  <div class="products">
+    <div class="product">
+      <img src="https://via.placeholder.com/200x160?text=كاميرا+مراقبة" alt="كاميرا مراقبة">
+      <h3>كاميرا مراقبة</h3>
+      <p>💵 السعر: 25,000 ل.س</p>
+      <a href="https://wa.me/963937661004?text=أرغب بشراء كاميرا مراقبة">اطلب الآن</a>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200x160?text=DVR+8+Channels" alt="جهاز DVR">
+      <h3>DVR 8 قنوات</h3>
+      <p>💵 السعر: 45,000 ل.س</p>
+      <a href="https://wa.me/963937661004?text=أرغب بشراء جهاز DVR 8 قنوات">اطلب الآن</a>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200x160?text=كابل+RG59" alt="كابل RG59">
+      <h3>كابل RG59</h3>
+      <p>💵 السعر: 7,500 ل.س / متر</p>
+      <a href="https://wa.me/963937661004?text=أرغب بشراء كابل RG59">اطلب الآن</a>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200x160?text=Power+Supply" alt="مزود طاقة">
+      <h3>مزود طاقة</h3>
+      <p>💵 السعر: 12,000 ل.س</p>
+      <a href="https://wa.me/963937661004?text=أرغب بشراء مزود طاقة">اطلب الآن</a>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200x160?text=Hard+Disk+1TB" alt="قرص صلب 1 تيرابايت">
+      <h3>قرص صلب 1TB</h3>
+      <p>💵 السعر: 60,000 ل.س</p>
+      <a href="https://wa.me/963937661004?text=أرغب بشراء قرص صلب 1TB">اطلب الآن</a>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/200x160?text=BNC+Connector" alt="رأس BNC">
+      <h3>رأس BNC</h3>
+      <p>💵 السعر: 1,500 ل.س / قطعة</p>
+      <a href="https://wa.me/963937661004?text=أرغب بشراء رأس BNC">اطلب الآن</a>
+    </div>
   </div>
 
-  <div class="product">
-    <h2>جهاز DVR</h2>
-    <p>مسجل فيديو عالي الجودة - 150$</p>
-    <a href="contact.html" class="button">اطلب الآن</a>
-  </div>
-
-  <div class="product">
-    <h2>كابل RG59</h2>
-    <p>جودة ممتازة - 1$/متر</p>
-    <a href="contact.html" class="button">اطلب الآن</a>
-  </div>
-
-  <!-- مربع تواصل مباشر مع البائع -->
-  <div style="
-    margin-top: 80px;
-    background: rgba(255, 255, 255, 0.07);
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-  ">
-    <p style="font-size: 1.1em; color: #aee4ff; margin-bottom: 15px;">
-      إذا أردت التواصل مباشر مع البائع اضغط هنا 👇🏻
-    </p>
-
-    <a href="https://wa.me/963997800661" target="_blank" style="
-      display: inline-block;
-      padding: 10px 25px;
-      background-color: #25D366;
-      color: white;
-      font-size: 1em;
-      font-weight: bold;
-      border: none;
-      border-radius: 30px;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
-    ">
-      اضغط هنا (صلاح المحصل) 💬
-    </a>
-  </div>
-
-  <div style="margin-top: 40px;">
-  <a href="javascript:history.back()" style="
-    display: inline-block;
-    margin: 5px;
-    padding: 10px 20px;
-    background-color: transparent;
-    border: 2px solid #00bfff;
-    color: #00bfff;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1em;
-  ">⬅️ الرجوع إلى الصفحة السابقة</a>
-
-  <a href="index.html" style="
-    display: inline-block;
-    margin: 5px;
-    padding: 10px 20px;
-    background-color: #00bfff;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1em;
-  ">🏠 الرجوع إلى الصفحة الرئيسية</a>
-  </div>
+  <footer>
+    جميع الحقوق محفوظة &copy; 2025 - متجر الرحيبة الرقمي
+  </footer>
 </body>
 </html>
 
