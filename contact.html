@@ -85,7 +85,7 @@
       margin: auto;
     }
 
-    input, textarea {
+    input, textarea, select {
       width: 90%;
       padding: 10px;
       margin: 10px 0;
@@ -129,99 +129,107 @@
       padding: 15px;
       font-size: 0.9em;
     }
+
+    .digital-logo {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle at center, #1e3c72, #2a5298);
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      z-index: 9999;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      font-weight: bold;
+      padding: 10px;
+      font-size: 0.9em;
+      line-height: 1.2em;
+      user-select: none;
+      animation: rotateLogo 20s linear infinite;
+    }
+
+    .digital-logo small {
+      font-size: 0.7em;
+      display: block;
+      opacity: 0.9;
+    }
+
+    @keyframes rotateLogo {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
   </style>
 </head>
 <body>
-  <!-- أضف هذا الكود داخل <body> في جميع صفحات الموقع -->
 
 <div class="digital-logo">
   <span>متجر الرحيبة<br><small>الرقمي الأول</small></span>
 </div>
 
-<style>
-.digital-logo {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 120px;
-  height: 120px;
-  background: radial-gradient(circle at center, #1e3c72, #2a5298);
-  border-radius: 50%;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  z-index: 9999;
-  color: white;
-  font-family: 'Arial', sans-serif;
+<h1>اتصل بنا</h1>
+<span style="
+  font-size: 1.4em;
   font-weight: bold;
-  padding: 10px;
-  font-size: 0.9em;
-  line-height: 1.2em;
-  user-select: none;
-  animation: rotateLogo 20s linear infinite;
-}
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: inline-block;
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+">
+  🛍️ أهلاً وسهلاً في متجر الرحيبة الرقمي لتلبية كافة المتطلبات بأسرع وقت وبأقل الأسعار
+</span>
 
-.digital-logo small {
-  font-size: 0.7em;
-  display: block;
-  opacity: 0.9;
-}
-
-@keyframes rotateLogo {
-  0% { transform: rotate(0deg);}
-  100% { transform: rotate(360deg);}
-}
-</style>
-  <h1>اتصل بنا</h1>
-  <span style="
-    font-size: 1.4em;
-    font-weight: bold;
-    color: white;
-    padding: 10px 20px;
-    border: 2px solid black;
-    border-radius: 10px;
-    display: inline-block;
-    text-shadow:
-      -1px -1px 0 black,
-      1px -1px 0 black,
-      -1px 1px 0 black,
-      1px 1px 0 black;
-  ">
-    🛍️ أهلاً وسهلاً في متجر الرحيبة الرقمي لتلبية كافة المتطلبات بأسرع وقت وبأقل الأسعار
-  </span>
 <br><br><br><br>
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="products.html">المنتجات</a>
-    <a href="contact.html">اتصل بنا</a>
-  </nav>
 
-  <div class="contact-info">
-    <p>📧 البريد الإلكتروني: 
-      <a href="mailto:mosab1999ko@gmail.com">
-        mosab1999ko@gmail.com 
-        <span class="icon">📩</span>
-      </a>
-    </p>
-    <p>
-      <a href="https://wa.me/963937661004" target="_blank">📱 0937661004 (mosab) <span class="icon">💬</span></a><br>
-      <a href="https://wa.me/963997800661" target="_blank">📱 0997800661 (Salah) <span class="icon">💬</span></a>
-    </p>
-    <p>
-      <a href="https://www.facebook.com/share/1AZMdqRNQX/" target="_blank">🔵 صفحتنا على فيسبوك</a>
-    </p>
-  </div>
+<nav>
+  <a href="index.html">الرئيسية</a>
+  <a href="products.html">المنتجات</a>
+  <a href="contact.html">اتصل بنا</a>
+</nav>
 
-  <form onsubmit="sendToWhatsapp(); return false;">
-    <input type="text" id="name" placeholder="الاسم الكامل" required>
-    <input type="email" id="email" placeholder="البريد الإلكتروني" required>
-    <textarea id="message" placeholder="اكتب رسالتك هنا..."></textarea>
-    <button type="submit">إرسال عبر واتساب</button>
-  </form>
+<div class="contact-info">
+  <p>📧 البريد الإلكتروني: 
+    <a href="mailto:mosab1999ko@gmail.com">
+      mosab1999ko@gmail.com 
+      <span class="icon">📩</span>
+    </a>
+  </p>
+  <p>
+    <a href="https://wa.me/963937661004" target="_blank">📱 0937661004 (mosab) <span class="icon">💬</span></a><br>
+    <a href="https://wa.me/963997800661" target="_blank">📱 0997800661 (Salah) <span class="icon">💬</span></a>
+  </p>
+  <p>
+    <a href="https://www.facebook.com/share/1AZMdqRNQX/" target="_blank">🔵 صفحتنا على فيسبوك</a>
+  </p>
+</div>
 
-   <div style="margin-top: 40px;">
+<!-- ✅ نموذج إرسال واتساب -->
+<form onsubmit="sendToWhatsapp(); return false;">
+  <input type="text" id="name" placeholder="الاسم الكامل" required>
+  <input type="tel" id="phone" placeholder="الرقم الخاص بك" required>
+  <select id="orderType" required>
+    <option value="" disabled selected>نوع الطلب</option>
+    <option value="طلب منتج">طلب منتج</option>
+    <option value="استفسار تقني">استفسار تقني</option>
+    <option value="خدمة تركيب أو صيانة">خدمة تركيب أو صيانة</option>
+    <option value="أخرى">أخرى</option>
+  </select>
+  <textarea id="message" placeholder="اكتب رسالة تفصيلية..." required></textarea>
+  <button type="submit">إرسال عبر واتساب</button>
+</form>
+
+<div style="margin-top: 40px;">
   <a href="javascript:history.back()" style="
     display: inline-block;
     margin: 5px;
@@ -234,7 +242,9 @@
     font-weight: bold;
     font-size: 1em;
   ">⬅️ الرجوع إلى الصفحة السابقة</a>
-<br>
+
+  <br>
+
   <a href="index.html" style="
     display: inline-block;
     margin: 5px;
@@ -247,21 +257,30 @@
     font-weight: bold;
     font-size: 1em;
   ">🏠 الرجوع إلى الصفحة الرئيسية</a>
-  </div>
+</div>
 
-  <footer>
-    جميع الحقوق محفوظة &copy; 2025
-  </footer>
+<footer>
+  جميع الحقوق محفوظة &copy; 2025
+</footer>
 
-  <script>
-    function sendToWhatsapp() {
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message").value;
-      const fullMessage = مرحبًا، أنا ${name} (%0Aالبريد: ${email})،%0Aأرغب في التواصل معكم:%0A${message};
-      const url = https://wa.me/963937661004?text=${fullMessage};
-      window.open(url, '_blank');
+<script>
+  function sendToWhatsapp() {
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const orderType = document.getElementById("orderType").value;
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !phone || !orderType || !message) {
+      alert("يرجى تعبئة جميع الحقول قبل الإرسال.");
+      return;
     }
-  </script>
+
+    const fullMessage = مرحبًا، أنا ${name}%0A📞 رقمي: ${phone}%0A📌 نوع الطلب: ${orderType}%0A📝 الرسالة:%0A${message};
+    const whatsappURL = https://wa.me/963937661004?text=${encodeURIComponent(fullMessage)};
+
+    window.open(whatsappURL, '_blank');
+  }
+</script>
+
 </body>
 </html>
