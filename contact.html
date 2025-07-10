@@ -8,18 +8,19 @@
       margin: 0;
       font-family: 'Arial', sans-serif;
       background: linear-gradient(135deg, #091540, #1E2A78, #3366CC);
-   background-size: 400% 400%;
-  animation: gradientBG 6s ease infinite;
-  color: #fff;
-  text-align: center;
-  padding: 40px 20px 80px;
-}
-@keyframes gradientBG {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
- {
-  
+      background-size: 400% 400%;
+      animation: moveBg 12s ease infinite;
+      color: #fff;
+      padding: 40px 20px 120px;
+      text-align: center;
+    }
+
+    @keyframes moveBg {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
     h1 {
       font-size: 2.5em;
       margin-bottom: 10px;
@@ -177,33 +178,9 @@
     <textarea id="message" placeholder="اكتب رسالتك هنا..."></textarea>
     <button type="submit">إرسال عبر واتساب</button>
   </form>
-  <div style="margin-top: 40px;">
-  <a href="javascript:history.back()" style="
-    display: inline-block;
-    margin: 5px;
-    padding: 10px 20px;
-    background-color: transparent;
-    border: 2px solid #00bfff;
-    color: #00bfff;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1em;
-  ">⬅️ الرجوع إلى الصفحة السابقة</a>
 
-  <a href="index.html" style="
-    display: inline-block;
-    margin: 5px;
-    padding: 10px 20px;
-    background-color: #00bfff;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1em;
-  ">🏠 الرجوع إلى الصفحة الرئيسية</a>
-  </div>
+  <a href="index.html" class="back-link">↩ الرجوع إلى الصفحة الرئيسية</a>
+
   <footer>
     جميع الحقوق محفوظة &copy; 2025
   </footer>
