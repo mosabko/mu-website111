@@ -2,168 +2,110 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>الصفحة الرئيسية</title>
+  <title>الصفحة الرئيسية - متجر الرحيبة الرقمي</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(120deg, #004e92, #000428);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1f4037, #99f2c8);
       background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
+      animation: gradientFlow 12s ease infinite;
       color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      position: relative;
       text-align: center;
-      padding: 30px;
+      padding: 40px 20px;
+      overflow-x: hidden;
     }
 
-    @keyframes gradientBG {
+    @keyframes gradientFlow {
       0% {background-position: 0% 50%;}
       50% {background-position: 100% 50%;}
       100% {background-position: 0% 50%;}
     }
 
-    .moon {
-      position: absolute;
-      top: -50px;
-      left: -50px;
-      width: 250px;
-      height: 250px;
-      background: radial-gradient(circle at 70% 30%, #ffffffaa, #00000000);
-      border-radius: 50%;
-      z-index: 0;
-    }
-
     h1 {
-      font-size: 3.5em;
-      background: linear-gradient(45deg, #00c6ff, #0072ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 0.4em;
+      font-size: 3.2em;
+      margin-bottom: 15px;
+      color: #ffffff;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
     }
 
-    .welcome-text {
-      font-size: 1.8em;
-      background: rgba(255, 255, 255, 0.15);
-      padding: 15px 25px;
-      border-radius: 12px;
-      margin-bottom: 40px;
-      box-shadow: 0 0 15px #ffffff33;
-      line-height: 1.8;
+    .intro-text {
+      font-size: 1.4em;
+      max-width: 700px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 50px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      line-height: 1.9;
+    }
+
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      max-width: 400px;
+      margin-bottom: 80px;
     }
 
     .main-button {
-      padding: 18px 36px;
-      font-size: 1.5em;
-      background: #00bfff;
+      background-color: #00b894;
       color: white;
+      padding: 16px 24px;
       border: none;
       border-radius: 35px;
-      cursor: pointer;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0, 184, 148, 0.4);
       transition: background 0.3s ease, transform 0.2s ease;
-      box-shadow: 0 8px 20px rgba(0, 191, 255, 0.4);
-      margin-bottom: 60px;
     }
 
     .main-button:hover {
-      background: #0099e6;
+      background-color: #019875;
       transform: scale(1.05);
     }
 
-    .contact-box {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+    .footer-contact {
       background: rgba(0,0,0,0.5);
-      color: white;
-      padding: 20px;
-      font-size: 1.2em;
-    }
-
-    .logo-box {
-      background: linear-gradient(to right, #1e3c72, #2a5298);
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      color: white;
-      font-family: 'Arial', sans-serif;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-      margin-bottom: 40px;
-      max-width: 700px;
-    }
-
-    .logo-box h1 {
-      font-size: 2.5em;
-      margin: 0;
-    }
-
-    .logo-box p {
+      padding: 18px 25px;
+      border-radius: 10px;
       font-size: 1.1em;
-      color: #d8ecff;
-      margin-top: 10px;
+      position: fixed;
+      bottom: 20px;
+      text-align: center;
+      color: #ffffff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .footer-contact strong {
+      color: #d0f0ff;
     }
   </style>
 </head>
 <body>
 
-<!-- أضف هذا الكود داخل <body> في جميع صفحات الموقع -->
-<div class="digital-logo">
-  <span>متجر الرحيبة<br><small>الرقمي الأول</small></span>
-</div>
-<style>
-.digital-logo {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 120px;
-  height: 120px;
-  background: radial-gradient(circle at center, #1e3c72, #2a5298);
-  border-radius: 50%;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  z-index: 9999;
-  color: white;
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
-  padding: 10px;
-  font-size: 0.9em;
-  line-height: 1.2em;
-  user-select: none;
-  animation: rotateLogo 20s linear infinite;
-}
-
-.digital-logo small {
-  font-size: 0.7em;
-  display: block;
-  opacity: 0.9;
-}
-
-@keyframes rotateLogo {
-  0% { transform: rotate(0deg);}
-  100% { transform: rotate(360deg);}
-}
-</style>
-
-  <h1>مرحبًا بك في متجرنا الرقمي</h1>
-  <h2>المتجر الاول في مدينة الرحيبة</h2>
-
-  <div class="welcome-text">
-    يسعدنا أن نقدم لك تجربة تسوق إلكتروني فريدة، تشمل منتجات موثوقة، جودة عالية، وأسعار منافسة.
+  <h1>🌐 متجر الرحيبة الرقمي</h1>
+  <div class="intro-text">
+    مرحبًا بك في منصتنا المتخصصة لعرض وطلب المنتجات الإلكترونية وكاميرات المراقبة بأفضل الأسعار وبأسرع وقت!  
+    يمكنك استعراض منتجاتنا أو الاشتراك لعرض منتجك الخاص.
   </div>
 
-  <a href="products.html"><button class="main-button">استعرض المنتجات الآن</button></a>
+  <div class="buttons-container">
+    <a href="products.html" class="main-button">📦 المنتجات المعروضة</a>
+    <a href="upload.html" class="main-button">📝 صفحة اشتراك المستخدم</a>
+  </div>
 
-  <div class="contact-box">
-    إذا واجهتك مشاكل، 0937661004 أو 0997800661
+  <div class="footer-contact">
+    إذا واجهتك أي مشكلة، لا تتردد بالتواصل على: <br>
+    <strong>0937661004</strong> أو <strong>0997800661</strong>
   </div>
 
 </body>
 </html>
-
