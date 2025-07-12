@@ -6,76 +6,70 @@
   <title>نموذج المنتج</title>
 </head>
 <body>
-
   <form id="productForm">
-    <label for="name">الاسم الكامل:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
+    <label for="name">الاسم الكامل:</label><br />
+    <input type="text" id="name" name="name" required /><br /><br />
 
-    <label for="email">بريد Gmail:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+    <label for="email">بريد Gmail:</label><br />
+    <input type="email" id="email" name="email" required /><br /><br />
 
-    <label for="password">كلمة المرور:</label><br>
-    <input type="password" id="password" name="password" required><br><br>
+    <label for="password">كلمة المرور:</label><br />
+    <input type="password" id="password" name="password" required /><br /><br />
 
-    <label for="product">اسم المنتج:</label><br>
-    <input type="text" id="product" name="product" required><br><br>
+    <label for="product">اسم المنتج:</label><br />
+    <input type="text" id="product" name="product" required /><br /><br />
 
     <button type="submit">إرسال</button>
   </form>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("productForm").addEventListener("submit", function (e) {
-        e.preventDefault();
+    document.getElementById("productForm").addEventListener("submit", function(e) {
+      e.preventDefault();
 
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const password = document.getElementById("password").value.trim();
-        const product = document.getElementById("product").value.trim();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const product = document.getElementById("product").value.trim();
 
-        // تحقق من أن جميع الحقول ممتلئة
-        if (!name || !email || !password || !product) {
-          alert("⚠️ الرجاء ملء جميع الحقول.");
-          return;
+      // تحقق من تعبئة جميع الحقول
+      if (!name || !email || !password || !product) {
+        alert("⚠️ الرجاء ملء جميع الحقول.");
+        return;
+      }
+
+      // تحقق أن البريد من نوع Gmail
+      if (!email.endsWith("@gmail.com")) {
+        alert("⚠️ يجب أن يكون البريد من نوع Gmail.");
+        return;
+      }
+
+      // تحقق من تطابق كلمة المرور مع البريد (حسب طلبك)
+      if (password !== email) {
+        alert("⚠️ يجب أن تكون كلمة المرور مطابقة للبريد الإلكتروني.");
+        return;
+      }
+
+      const data = { name, email, password, product };
+
+      fetch("https://script.google.com/macros/s/AKfycbwZnF7InCkK6l9Rnsw0O4tH4gfdemIJ1YVeUnrEG-H8TkvVvn-uroCscxvF9Ssb_dhG/exec", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        if (response.ok) {
+          alert("✅ تم إرسال البيانات بنجاح!");
+          document.getElementById("productForm").reset();
+        } else {
+          alert("❌ حدث خطأ أثناء الإرسال، حاول مرة أخرى.");
         }
-
-        // تحقق من صحة البريد وأن كلمة المرور تطابق البريد
-        if (!email.endsWith("@gmail.com")) {
-          alert("⚠️ يجب أن يكون البريد من نوع Gmail.");
-          return;
-        }
-
-        if (password !== email) {
-          alert("⚠️ يجب أن تكون كلمة المرور مطابقة للبريد الإلكتروني.");
-          return;
-        }
-
-        const data = { name, email, password, product };
-
-        console.log("📌 تم تجهيز البيانات:", data);
-
-        fetch("https://script.google.com/macros/s/AKfycbwkzuWPtIXs8jnQ1vSqxev4YQ-PAwygrKSYQjsEwsBVD8RG5HYadLHZnLWyTn60nUaz/exec", {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: {
-            "Content-Type": "application/json"
-          }
-        })
-        .then(response => {
-          if (response.ok) {
-            alert("✅ تم إرسال البيانات بنجاح!");
-            document.getElementById("productForm").reset();
-          } else {
-            alert("❌ حدث خطأ أثناء الإرسال، حاول مرة أخرى.");
-          }
-        })
-        .catch(error => {
-          alert("⚠️ فشل الاتصال بالخادم: " + error.message);
-        });
+      })
+      .catch(error => {
+        alert("⚠️ فشل الاتصال بالخادم: " + error.message);
       });
     });
   </script>
 </body>
 </html>
-
-
