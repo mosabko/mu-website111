@@ -33,13 +33,13 @@
         const password = document.getElementById("password").value.trim();
         const product = document.getElementById("product").value.trim();
 
-        // ✅ تحقق من أن جميع الحقول ممتلئة
+        // تحقق من أن جميع الحقول ممتلئة
         if (!name || !email || !password || !product) {
           alert("⚠️ الرجاء ملء جميع الحقول.");
           return;
         }
 
-        // ✅ تحقق من صحة البريد وأن كلمة المرور تطابق البريد
+        // تحقق من صحة البريد وأن كلمة المرور تطابق البريد
         if (!email.endsWith("@gmail.com")) {
           alert("⚠️ يجب أن يكون البريد من نوع Gmail.");
           return;
@@ -54,7 +54,7 @@
 
         console.log("📌 تم تجهيز البيانات:", data);
 
-        fetch("https://script.google.com/macros/s/AKfycbzgX12NErtMduZ2WrIGRhEmnNBLMirL5Wx8gc-1G8sYrFJVxboxDjJUW-KIrYkr85oU/exec", {
+        fetch("https://script.google.com/macros/s/AKfycbwj5c7gElLLfxpvxO5xfVtQYnfZDDIMHn2zuTzKJNjrM7vx2FEekARmqO2BzR1vtsp6/exec", {
           method: "POST",
           body: JSON.stringify(data),
           headers: {
@@ -77,4 +77,5 @@
   </script>
 </body>
 </html>
+
 
