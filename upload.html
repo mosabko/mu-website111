@@ -1,125 +1,33 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-  <meta charset="UTF-8">
-  <title>إرسال منتجك</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      color: #fff;
-      text-align: center;
-      padding: 50px 20px;
-    }
+<script>
+  document.getElementById("productForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
+    const data = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      password: document.getElementById("password").value,
+      product: document.getElementById("product").value
+    };
 
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      background: linear-gradient(45deg, #00d2ff, #3a7bd5);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    form {
-      background: rgba(255,255,255,0.1);
-      padding: 30px;
-      border-radius: 15px;
-      max-width: 500px;
-      margin: auto;
-      box-shadow: 0 0 20px rgba(255,255,255,0.1);
-    }
-
-    input, textarea {
-      width: 90%;
-      padding: 12px;
-      margin: 12px 0;
-      border: none;
-      border-radius: 8px;
-      font-size: 1em;
-    }
-
-    textarea {
-      height: 120px;
-    }
-
-    button {
-      padding: 12px 30px;
-      background-color: #00bfff;
-      color: white;
-      border: none;
-      border-radius: 25px;
-      font-size: 1em;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #0099e6;
-    }
-
-    .back-link {
-      margin-top: 30px;
-      display: block;
-      color: white;
-      text-decoration: underline;
-      font-size: 1.1em;
-    }
-  </style>
-</head>
-<body>
-  <h1>📝 أضف منتجك</h1>
-
-  <form id="productForm">
-    <input type="text" id="name" placeholder="اسم المستخدم" required>
-    <input type="email" id="email" placeholder="البريد الإلكتروني (Gmail)" required>
-    <input type="password" id="password" placeholder="كلمة المرور" required>
-    <textarea id="product" placeholder="وصف المنتج الذي تريد عرضه" required></textarea>
-    <button type="submit">إرسال</button>
-  </form>
-
-  <a href="index.html" class="back-link">🏠 الرجوع إلى الصفحة الرئيسية</a>
-
-  <script>
-    document.getElementById("productForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const data = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        password: document.getElementById("password").value,
-        product: document.getElementById("product").value
-      };
-
-      fetch("https:// https://script.google.com/macros/s/AKfycbwq-2vzK-FA-k1CKxrx1VED6XrebX1Sf2AyIoa8RTAI0J5Gjc0-idi-0EDtuDPiBqLnGw/exec/exec", { 
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json"
-        }
-      })
-      .then(response => {
-        if (response.ok) {
-          alert("✅ تم إرسال البيانات بنجاح!");
-          document.getElementById("productForm").reset();
-        } else {
-          alert("❌ حدث خطأ أثناء الإرسال، حاول مرة أخرى.");
-        }
-      })
-      .catch(error => {
-        alert("⚠️ فشل الاتصال بالخادم: " + error.message);
-      });
+    fetch("https://script.google.com/macros/s/AKfycbxEfjthJx3i8fhyjsdtUUFhKp-pYlbMwF0YOtxhQRlGvhtsqMms1milm3WkikI7q8Tj/exec", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("✅ تم إرسال البيانات بنجاح!");
+        document.getElementById("productForm").reset();
+      } else {
+        alert("❌ حدث خطأ أثناء الإرسال، حاول مرة أخرى.");
+      }
+    })
+    .catch(error => {
+      alert("⚠️ فشل الاتصال بالخادم: " + error.message);
     });
-  </script>
-</body>
-</html>
+  });
+</script>
+
 
